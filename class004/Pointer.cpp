@@ -20,7 +20,7 @@ int main(){
 
     // 指针的解引用必须保证不是空指针
     int *p1 = nullptr;
-    std::cout << *p1 << '\n';
+    std::cout << *p1 << '\n'; // 报错
 
     system("pause");
     return 0;
