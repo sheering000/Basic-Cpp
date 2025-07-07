@@ -12,6 +12,7 @@ int main(){
 
     std::cout << "example2 age: " << age << '\n';
     std::cout << "example2 name: " << name << '\n';
+
     
     // system("pause");
     return 0;
