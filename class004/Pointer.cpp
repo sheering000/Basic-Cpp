@@ -22,6 +22,7 @@ int main(){
     int *p1 = nullptr;
     std::cout << *p1 << '\n'; // 报错
 
+    
     system("pause");
     return 0;
 }
