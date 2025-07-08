@@ -1,6 +1,9 @@
 // const修饰符
 #include <iostream>
 
+int i4 = 4;
+int GetSize(){return 1;}
+
 int main(){
     // 常量指针 指向的值不可变
     const double PI = 3.14;
@@ -26,5 +29,10 @@ int main(){
     const int int_size = sizeof(int); // 右边需要计算才能得出结果
 
     constexpr int i1 = 10; // 声明为常量表达式，编译期计算
-    constexpr int i2 = sizeof(int);
+    // constexpr int i2 = GetSize(); GetSize()是非常量表达式，运行时计算，编译时报错
+
+    constexpr int *ptr2 = nullptr; // 等价于 int *const ptr2 = nullptr;
+    int i3 = 10;
+    // constexpr int *ptr3 = &i3; // 报错，因为i3定义在栈中，无固定地址
+    constexpr int *ptr4 = &i4; // 正确，i4定义在堆中，有固定地址
 }
